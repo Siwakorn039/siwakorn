@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>
+
+    </title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.css.map">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body >
+  <style type="text/css">
+      body {
+          background: url("https://wallpaperscraft.com/image/paris_france_eiffel_tower_dusk_lights_58131_3840x2160.jpg") no-repeat center center fixed;) no-repeat center center fixed;
+          background-size: cover;
+      }
+  </style>
+
+<div class="tile is-ancestor">
+      <div class="tile is-vertical is-12">
+        <div class="tile">
+          <div class="tile is-parent is-vertical">
+            <article class="tile is-child notification is-primary">
+              <p class="title">Siwakorn Login</p>
+
+            </article>
+          </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <main>
+        <center>
+          <img class="responsive-img" style="width: 150px;" src="https://cdn.pixabay.com/photo/2013/07/12/15/05/dragon-149393_960_720.png" />
+
+
+          <h5 class="indigo-text" ><font color="#dce775">login here</font></h5>
+
+
+          <div class="container">
+          <div class="z-depth-4 transparent row" style="display: inline-block; padding: 32px 48px 0px 48px;">
+            <table>
+
+              <form class="col s12" action="#" method="post">
+                <div class='row'>
+                  <div class='col s12'>
+                  </div>
+                </div>
+
+
+                <center>
+                <div class='row'>
+                  <div class='input-field col s12'>
+
+                    <label for='username'><font color="#dce775"><i class="fa fa-user-circle" style="font-size:24px"></i>&nbsp;Username&nbsp;&nbsp;</font></label>
+                    &nbsp;           &nbsp;    &nbsp;  &nbsp; &nbsp;  &nbsp;    &nbsp;    &nbsp;<input class='form-control' type='text' name='username' id='username' />
+                    <br>
+                    <br>
+
+                  </div>
+                </div>
+              </center>
+
+
+
+                <div class='row'>
+                  <div class='input-field col s12'>
+                   <center>
+                    <label for='password'><font color="#dce775"><i class="fa fa-key" style="font-size:24px"></i>&nbsp;Enter your password</font></label>
+                      <input class='form-control' type='password' name='password' id='password' />
+                    </center>
+                  </div>
+
+
+                  <label style='float: right;'>
+    								<a class='white-text' href='#!'><b><font size="2">Forgot Password?</font></b></a>
+    							</label>
+                </div>
+
+                <br />
+                <center>
+                  <div class='row'>
+                    </div>
+                    <button type='button' name='button' class='btn btn-primary' id="signin">Login</button>
+                  </div>
+                  <div id="err" style="display:none" class="alert alert-danger alert-dismissable fade in">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">x</a>
+                  <center>  <font color="red"><strong>Incorrect username or password</strong>
+                    Please check your password.</font></center>
+                  </div>
+                </center>
+              </form>
+            </div>
+
+
+        </center>
+
+      </table>
+
+
+
+      </main>
+
+      <footer class="page-footer">
+
+    </footer>
+
+
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      <script type="text/javascript">
+        $("#signin").click(function() {
+          var url = "http://membershipwebapi977290.azurewebsites.net/api/Members/signin?";
+          url += "username=" + $("#username").val();
+          url += "&password=" + $("#password").val();
+          console.log(url);
+          $.get(url, function(data, status) {
+            console.log(data);
+            if(data == true){
+              //Goto User's info
+            }else{
+              //Goto Sign up
+              $("#err").show();
+              //window.location.href = "signup.html";
+            }
+          });
+        });
+      </script>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    <br>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </body>
+</html>
